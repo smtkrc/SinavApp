@@ -1,0 +1,90 @@
+﻿@model SinavProje.Models.SorularDetay
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="text-center">
+    <form method="post">
+        <div>
+            <ul>
+                <h4 style="text-align:left">Yazı</h4>
+                @Html.DropDownListFor(x => x.SoruBaslik, (List<SelectListItem>)ViewBag.dg5, new { @class = "form-control" })
+                <br />
+                <br />
+                @Html.TextBoxFor(x=>x.SoruMetin, new { @class = "form-control" })
+                <br />
+                @Html.TextBoxFor(x => x.Soru1, new { @class = "form-control", @placeholder = "Soru1" })
+                <li>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="text-align:left">A) @Html.TextBoxFor(x => x.S1A, new { @style = "border:hidden; width:80%" })</th>
+                            <th style="text-align:left">B) @Html.TextBoxFor(x => x.S1B, new { @style = "border:hidden; width:80%" })</th>
+                        </tr>
+                    </table>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="text-align:left">C) @Html.TextBoxFor(x => x.S1C, new { @style = "border:hidden; width:80%" })</th>
+                            <th style="text-align:left">D) @Html.TextBoxFor(x => x.S1D, new { @style = "border:hidden; width:80%" })</th>
+                        </tr>
+                    </table>
+                </li>
+                @Html.DropDownListFor(x => x.SC1, new List<SelectListItem> { new SelectListItem { Text = "A", Value = "A" }, new SelectListItem { Text = "B", Value = "B" }, new SelectListItem { Text = "C", Value = "C" }, new SelectListItem { Text = "D", Value = "D" } }, "Doğru cevabı seçiniz", new { @class = "form-control", @style = "text-align:center" })
+                <br />
+                @Html.TextBoxFor(x => x.Soru2, new { @class = "form-control", @placeholder = "Soru2" })
+                <li>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="text-align:left">A)  @Html.TextBoxFor(x => x.S2A, new { @style = "border:hidden; width:80%" })</th>
+                            <th style="text-align:left">B) @Html.TextBoxFor(x => x.S2B, new { @style = "border:hidden; width:80%" })</th>
+                        </tr>
+                    </table>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="text-align:left">C) @Html.TextBoxFor(x => x.S2C, new { @style = "border:hidden; width:80%" })</th>
+                            <th style="text-align:left">D) @Html.TextBoxFor(x => x.S2D, new { @style = "border:hidden; width:80%" })</th>
+                        </tr>
+                    </table>
+                </li>
+                @Html.DropDownListFor(x => x.SC2, new List<SelectListItem> { new SelectListItem { Text = "A", Value = "A" }, new SelectListItem { Text = "B", Value = "B" }, new SelectListItem { Text = "C", Value = "C" }, new SelectListItem { Text = "D", Value = "D" } }, "Doğru cevabı seçiniz", new { @class = "form-control", @style = "text-align:center" })
+                <br />
+                @Html.TextBoxFor(x => x.Soru3, new { @class = "form-control", @placeholder = "Soru3" })
+                <li>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="text-align:left">A) @Html.TextBoxFor(x => x.S3A, new { @style = "border:hidden; width:80%" })</th>
+                            <th style="text-align:left">B) @Html.TextBoxFor(x => x.S3B, new { @style = "border:hidden; width:80%" })</th>
+                        </tr>
+                    </table>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="text-align:left">C) @Html.TextBoxFor(x => x.S3C, new { @style = "border:hidden; width:80%" })</th>
+                            <th style="text-align:left">D) @Html.TextBoxFor(x => x.S3D, new { @style = "border:hidden; width:80%" })</th>
+                        </tr>
+                    </table>
+                </li>
+                @Html.DropDownListFor(x => x.SC3, new List<SelectListItem> { new SelectListItem { Text = "A", Value = "A" }, new SelectListItem { Text = "B", Value = "B" }, new SelectListItem { Text = "C", Value = "C" }, new SelectListItem { Text = "D", Value = "D" } }, "Doğru cevabı seçiniz", new { @class = "form-control", @style = "text-align:center" })
+                <br />
+                @Html.TextBoxFor(x => x.Soru4, new { @class = "form-control", @placeholder = "Soru4" })
+                <li>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="text-align:left">A) @Html.TextBoxFor(x => x.S4A, new { @style = "border:hidden; width:80%" })</th>
+                            <th style="text-align:left">B) @Html.TextBoxFor(x => x.S4B, new { @style = "border:hidden; width:80%" })</th>
+                        </tr>
+                    </table>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="text-align:left">C) @Html.TextBoxFor(x => x.S4C, new { @style = "border:hidden; width:80%" })</th>
+                            <th style="text-align:left">D) @Html.TextBoxFor(x => x.S4D, new { @style = "border:hidden; width:80%" })</th>
+                        </tr>
+                    </table>
+                </li>
+                @Html.DropDownListFor(x => x.SC4, new List<SelectListItem> { new SelectListItem { Text = "A", Value = "A" }, new SelectListItem { Text = "B", Value = "B" }, new SelectListItem { Text = "C", Value = "C" }, new SelectListItem { Text = "D", Value = "D" } }, "Doğru cevabı seçiniz", new { @class = "form-control", @style = "text-align:center" })
+                <br />
+                <button class="btn btn-info" href="Sinav/YeniSinav"> Sınav Oluştur</button>
+            </ul>
+        </div>
+    </form>
+</div>

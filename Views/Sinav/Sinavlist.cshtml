@@ -1,0 +1,31 @@
+﻿@using SinavProje.Models
+@model List<SorularDetay>
+
+@{
+    ViewData["Title"] = "YeniSinav";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>BAŞLIK</th>
+            <th>TARİH</th>
+            <th>Sil</th>
+            <th>SINAV ÇÖZ</th>
+
+        </tr>
+    </thead>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.SoruBaslik</td>
+            <td>@x.Tarih</td>
+            <td style="color:white"><a href="/Sinav/SinavSil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td style="color:white"><a href="/Sinav/SinavCöz/@x.ID" class="btn btn-danger">Çöz</a></td>
+        </tr>
+    }
+</table>
+

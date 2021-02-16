@@ -1,0 +1,100 @@
+﻿@using SinavProje.Models;
+@model List<SorularDetay>
+@{
+    ViewData["Title"] = "SinavCöz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div style="text-align:center">
+        @foreach (var item in Model)
+        {
+            <form class="form-control" style="border-color:white;text-align:center;font-size:35px;font-style:inherit">
+                <p>@item.SoruBaslik</p>
+            </form>
+            <form class="form-control" style="border-color:white;text-align:center">
+                <p>@item.SoruMetin</p>
+            </form>
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="table-bordered" style="border-color:white">
+                        <p style="text-align:left"> Soru 1 - ) @item.Soru1</p>
+                        <p style="text-align:left">
+                            <button id="1" class="form-control" style="text-align:left">A-) @item.S1A</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="2  formmethod="get"" class="form-control" style="text-align:left">B-) @item.S1B</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="3"  formmethod="get" class="form-control" style="text-align:left">C-) @item.S1C</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="4"  formmethod="get" class="form-control" style="text-align:left">D-) @item.S1D</button>
+                        </p>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <form class="table-bordered" style="border-color:white">
+                        <p style="text-align:left"> Soru 2 - ) @item.Soru2</p>
+                        <p style="text-align:left">
+                            <button id="5" class="form-control" style="text-align:left">A-) @item.S2A</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="6" class="form-control" style="text-align:left">B-) @item.S2B</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="7" class="form-control" style="text-align:left">C-) @item.S2C</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="8" class="form-control" style="text-align:left">D-) @item.S2D</button>
+                        </p>
+                    </form>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="table-bordered" style="border-color:white">
+                        <p style="text-align:left"> Soru 3 - ) @item.Soru3</p>
+                        <p style="text-align:left">
+                            <button id="9" class="form-control" style="text-align:left">A-) @item.S3A</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="10" class="form-control" style="text-align:left">B-) @item.S3B</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="11" class="form-control" style="text-align:left">C-) @item.S3C</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="12" class="form-control" style="text-align:left">D-) @item.S3D</button>
+                        </p>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <form class="table-bordered" style="border-color:white">
+                        <p style="text-align:left"> Soru 4 - ) @item.Soru4</p>
+                        <p style="text-align:left">
+                            <button id="13" class="form-control" style="text-align:left">A-) @item.S4A</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="14" class="form-control" style="text-align:left">B-) @item.S4B</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="15" class="form-control" style="text-align:left">C-) @item.S4C</button>
+                        </p>
+                        <p style="text-align:left">
+                            <button id="16" class="form-control" style="text-align:left">D-) @item.S4D</button>
+                        </p>
+                    </form>
+                </div>
+                <div>
+                </div>
+            </div>
+        }
+        <div class="form-control" style="border-color:white">
+            <button class="btn btn-info" style="background-color:transparent;color:black">Sınavı tamamla</button>
+        </div>
+    </div>
+</div>
+
